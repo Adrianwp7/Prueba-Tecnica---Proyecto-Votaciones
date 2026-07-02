@@ -1,0 +1,338 @@
+{
+  "info": {
+    "_postman_id": "6e75d583-a01a-45a0-ac4a-f23d2d2812fe",
+    "name": "sistema de votaciones",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21416485"
+  },
+  "item": [
+    {
+      "name": "Votantes",
+      "item": [
+        {
+          "name": "Crear Votante",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Eider Arley Restrepo\",\r\n    \"email\": \"eiderArley@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/voters",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "voters"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Votantes",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:3000/voters",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "voters"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Votante por ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:3000/voters/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "voters",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Votante por Nombre",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:3000/voters/search?name=Eider Arley Restrepo",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "voters",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Eider Arley Restrepo",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Votante por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:3000/voters/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "voters",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Candidatos",
+      "item": [
+        {
+          "name": "Crear Candidato",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Abelardo\",\r\n    \"party\": \"Firmes por la patria\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/candidates",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "candidates"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Candidatos",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:3000/candidates",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "candidates"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Candidato por ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:3000/candidates/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "candidates",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Candidato por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:3000/candidates/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "candidates",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Votos",
+      "item": [
+        {
+          "name": "Crear Voto",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"voterId\": 2,\r\n    \"candidateId\": 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/votes",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "votes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Votos",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:3000/votes",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "votes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Estadisticas Votos",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:3000/votes/statistics",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "votes",
+                "statistics"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
