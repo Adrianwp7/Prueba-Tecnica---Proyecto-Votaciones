@@ -8,7 +8,6 @@ API REST desarrollada con **Node.js**, **Fastify**, **TypeScript** y **PostgreSQ
 - TypeScript
 - Fastify
 - PostgreSQL
-- JWT
 - Zod
 - Swagger
 
